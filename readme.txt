@@ -1,7 +1,7 @@
 === PixoPoint Email Submit ===
 Contributors: ryanhellyer
 Tags: email, submit, shortcode, storage, pixopoint, submission
-Donate link: http://pixopoint.com/products/email-submit/
+Donate link: http://pixopoint.com/donation/
 Requires at least: 3.0.3
 Stable tag: 0.2.1
 
