@@ -5,7 +5,6 @@ Donate link: http://pixopoint.com/donation/
 Requires at least: 3.0.3
 Stable tag: 0.2.1
 
-Widget to add the Twitter Tools Profile, List, Faves, and Search Widgets, with all configurable options.
 Allows you to acccept email submissions on your site, and export them in an email friendly format.
 
 == Description ==
