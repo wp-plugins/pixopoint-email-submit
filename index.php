@@ -5,7 +5,7 @@
 	Plugin URI: http://pixopoint.com/product/email-submit/
 	Description: A WordPress plugin which adds an email submit form
 	Author: PixoPoint Web Development / Ryan Hellyer
-	Version: 0.2.2
+	Version: 0.2.3
 	Author URI: http://pixopoint.com/
 
 	Copyright (c) 2009 PixoPoint Web Development
@@ -31,7 +31,7 @@ if ( !defined( 'ABSPATH' ) )
  * Specifying locations
  * @since 0.1
  */
-define( 'PIXOPOINT_EMAILSUBMIT_AD', "<!-- PixoPoint Email Submit plugin v0.2.2 - http://pixopoint.com/products/email-submit/ -->
+define( 'PIXOPOINT_EMAILSUBMIT_AD', "<!-- PixoPoint Email Submit plugin v0.2.3 - http://pixopoint.com/products/email-submit/ -->
 " );
 define( 'PIXOPOINT_EMAILSUBMIT_DIR', plugins_url( '', __FILE__ ) . '/' ); // Plugin folder URL
 define( 'PIXOPOINT_EMAILSUBMIT_OPTION', 'pixopoint_emailsubmit_option' );
@@ -69,7 +69,7 @@ add_shortcode( 'emailsubmit', 'pixopoint_emailsubmit_shortcode' );
  * Add another email
  * @since 0.1
  */
-if ( $_POST['pixopoint_emailsubmit'] ) {
+if ( isset( $_POST['pixopoint_emailsubmit'] ) ) {
 	$email_list = get_option( PIXOPOINT_EMAILSUBMIT_OPTION );
 	$email_list = $email_list . ',' . sanitize_email( $_POST['pixopoint_emailsubmit'] );
 	add_option( PIXOPOINT_EMAILSUBMIT_OPTION, $email_list );
@@ -81,6 +81,8 @@ if ( $_POST['pixopoint_emailsubmit'] ) {
  * @since 0.1
  */
 function pixopoint_emailsubmit_get() {
+	if ( ! isset( $_GET['pixopoint_emailsubmit'] ) )
+		return;
 
 	// Security checks (user permissions and nonce protection)
 	if ( !current_user_can( 'manage_options' ) OR !wp_verify_nonce( $_GET['_wpnonce'], 'pixopoint_emailnonce') )
@@ -89,8 +91,7 @@ function pixopoint_emailsubmit_get() {
 	// Displaying list
 	echo pixopoint_emailsubmit_list( $_GET['pixopoint_emailsubmit'] );
 }
-if ( $_GET['pixopoint_emailsubmit'] )
-	add_action( 'init', 'pixopoint_emailsubmit_get' );
+add_action( 'init', 'pixopoint_emailsubmit_get' );
 
 /**
  * Comma delimited email list

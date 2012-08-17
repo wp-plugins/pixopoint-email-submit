@@ -3,7 +3,7 @@ Contributors: ryanhellyer
 Tags: email, submit, shortcode, storage, submission
 Donate link: http://pixopoint.com/donation/
 Requires at least: 3.4
-Stable tag: 0.2.2
+Stable tag: 0.2.3
 
 Allows you to acccept email submissions on your site, and export them in an email friendly format.
 
@@ -64,6 +64,7 @@ Visit the <a href="http://pixopoint.com/products/email-submit/">PixoPoint Email 
 
 == History ==
 
+Version 0.2.3 Fixed debug issues<br />
 Version 0.2.2 Hopefully fixed bug which caused a debug error when no email addresses were used<br />
 Version 0.2.1 Improved documentation and added screenshot<br />
 Version 0.2 Added ability to edit existing list via admin panel<br />
