@@ -44,7 +44,11 @@ function pixopoint_emailsubmit_options_validate( $input ) {
 	}
 
 	// Recombine email addresses
-	$input = implode( ',', $email_list );
+	if ( is_array( $email_list ) ) {
+		$input = implode( ',', $email_list );
+	} else {
+		$input = array();
+	}
 
 	return $input;
 }
@@ -126,4 +130,3 @@ function pixopoint_emailsubmit_options() {
 
 <?php
 }
-
