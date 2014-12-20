@@ -3,7 +3,7 @@
 	Registers settings, adds a new submenu in the admin panel and adds options to array
 	@since 0.1
 
-	Copyright (c) 2009 PixoPoint Web Development
+	Copyright (c) 2009 Ryan Hellyer
 
 */
 
@@ -61,7 +61,7 @@ function pixopoint_emailsubmit_options_add_page() {
 
 	// Add admin page
 	$page = add_options_page(
-		__( 'PixoPoint Email Submissions' ), 
+		__( 'Email Submissions' ), 
 		__( 'Email submissions' ), // Name in menu
 		'administrator', // Who has access
 		'pixopoint_emailsubmitoptions', // URL
@@ -96,7 +96,7 @@ function pixopoint_emailsubmit_options() {
 	<form method="post" action="options.php" id="options">
 	<div class="wrap">
 		<?php screen_icon( 'pixopoint-emailsubmit' ); ?>
-		<h2><?php _e( 'PixoPoint Email Submissions', 'pixopoint_emailsubmit_lang' ); ?></h2>
+		<h2><?php _e( 'Email Submissions', 'pixopoint_emailsubmit_lang' ); ?></h2>
 
 		<div style="clear:both;padding-top:20px;"></div>
 
@@ -117,12 +117,6 @@ function pixopoint_emailsubmit_options() {
 		<textarea style="width:100%;height:300px;" name="<?php echo PIXOPOINT_EMAILSUBMIT_OPTION; ?>"><?php echo pixopoint_emailsubmit_list( 'comma', '' ); ?></textarea>
 		<input type="hidden" name="action" value="update" />
 		<p class="submit"><input type="submit" name="Submit" value="<?php _e( 'Update List' ) ?>" /></p>
-
-		<p>
-			<small>
-				<?php _e( 'Visit the <a href="http://pixopoint.com/products/email-submit/">PixoPoint Email Submit page</a> for more information. If you find any bugs, please report them in the  <a href="http://pixopoint.com/forum/index.php?board=3.0">PixoPoint support forum</a>. Please note that we are not accepting unpaid requests for improvements or unpaid support for this plugin. The <a href="http://pixopoint.com/products/email-submit/">PixoPoint Email Submit plugin</a> was created for a specific site and we do not have time to provide free technical assistance for it unfortunately.', 'pixopoint_emailnonce' ); ?>
-			</small>
-		</p>
 	</form>
 
 

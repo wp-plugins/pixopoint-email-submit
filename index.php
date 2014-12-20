@@ -1,14 +1,14 @@
 <?php
 /*
 
-	Plugin Name: PixoPoint Email Submit
-	Plugin URI: http://pixopoint.com/product/email-submit/
+	Plugin Name: Email Submit
+	Plugin URI: https://geek.hellyer.kiwi/product/email-submit/
 	Description: A WordPress plugin which adds an email submit form
-	Author: PixoPoint Web Development / Ryan Hellyer
-	Version: 0.2.3
-	Author URI: http://pixopoint.com/
+	Author: Ryan Hellyer
+	Version: 0.2.4
+	Author URI: https://geek.hellyer.kiwi/
 
-	Copyright (c) 2009 PixoPoint Web Development
+	Copyright (c) 2009 Ryan Hellyer
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as
@@ -31,7 +31,7 @@ if ( !defined( 'ABSPATH' ) )
  * Specifying locations
  * @since 0.1
  */
-define( 'PIXOPOINT_EMAILSUBMIT_AD', "<!-- PixoPoint Email Submit plugin v0.2.3 - http://pixopoint.com/products/email-submit/ -->
+define( 'PIXOPOINT_EMAILSUBMIT_AD', "<!-- Email Submit plugin v0.2.4 - https://geek.hellyer.kiwi/products/email-submit/ -->
 " );
 define( 'PIXOPOINT_EMAILSUBMIT_DIR', plugins_url( '', __FILE__ ) . '/' ); // Plugin folder URL
 define( 'PIXOPOINT_EMAILSUBMIT_OPTION', 'pixopoint_emailsubmit_option' );
