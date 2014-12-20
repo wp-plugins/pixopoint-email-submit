@@ -8,6 +8,9 @@ Stable tag: 0.2.4
 Allows you to acccept email submissions on your site, and export them in an email friendly format.
 
 == Description ==
+
+This plugin is very old and is no longer maintained.
+
 The <a href="https://geek.hellyer.kiwi/products/email-submit/">Email Submit plugin</a> allows you to acccept email submissions on your site, and store those in your WordPress database. You can access these files in comma delimited form via the plugins admin page (under settings).
 
 <small>Please note that we are not accepting unpaid requests for improvements or unpaid support for this plugin. The <a href="https://geek.hellyer.kiwi/products/email-submit/">Email Submit plugin</a> was created for a specific site and we do not have time to provide free technical assistance for it unfortunately.</small>
